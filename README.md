@@ -1,5 +1,5 @@
-<div align='center'><img src='./asserts/logo.png'></div>
-<div align='center'  class='title'><img src='./asserts/title.png'/></div>
+<div align='center'><img src='./static/logo.png'></div>
+<div align='center' style="transform:scale(1.5)"><img src='./static/title.png'/></div>
 
 # features
 
@@ -8,7 +8,7 @@
 # Keywords:
 
 -   class based view
--   auto scan and wired
+-   auto scan and inject
 -   public dependencies
 -   ...
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
 ```
 
-<div align='center'><img src='./asserts/image.png'/></div>
+<div align='center'><img src='./static/image.png'/></div>
 
 ## 2. v2
 
@@ -123,4 +123,4 @@ if __name__ == "__main__":
 
 ```
 
-<div align='center'><img src='./asserts/image-1.png'/></div>
+<div align='center'><img src='./static/image-1.png'/></div>

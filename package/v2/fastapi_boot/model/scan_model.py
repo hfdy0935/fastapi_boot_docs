@@ -1,4 +1,4 @@
-from typing import Annotated, Any, Callable, Dict, List, Optional, Union
+from typing import Annotated, Any, Dict, List, Optional, Union
 from fastapi import APIRouter
 from pydantic import BaseModel, Field
 from fastapi_boot.enums.bean import BeanType
@@ -32,7 +32,9 @@ class Config(BaseModel):
     scan_timeout_second: Annotated[
         Union[int, float], Field(gt=0, description="扫描超时时间，超时未找到报错")
     ] = 10
-    exclude_scan_path:Annotated[List[str],Field(description='忽略扫描的模块或包在项目中的点路径')]=[]
+    exclude_scan_path: Annotated[
+        List[str], Field(description="忽略扫描的模块或包在项目中的点路径")
+    ] = []
 
 
 class BeanItem(BaseModel):

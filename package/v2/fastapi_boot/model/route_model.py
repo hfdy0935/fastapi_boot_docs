@@ -7,7 +7,6 @@ from typing import (
     Callable,
     Dict,
     List,
-    Literal,
     Optional,
     Sequence,
     Type,
@@ -46,10 +45,13 @@ class Symbol(BaseModel):
         - 判断是否是other的后代路由
         - 不能直接用in，example: a.b1  a.b
         """
-        contain=[1 for i,j in zip(self.context_path.split('.'), other.context_path.split('.')) if i==j]
-        return (
-            self.file_path == other.file_path
-            and len(contain)==len(other.context_path.split('.'))
+        contain = [
+            1
+            for i, j in zip(self.context_path.split("."), other.context_path.split("."))
+            if i == j
+        ]
+        return self.file_path == other.file_path and len(contain) == len(
+            other.context_path.split(".")
         )
 
     def is_child(self, other: "Symbol") -> bool:
@@ -182,6 +184,3 @@ class RouteRecordItem(BaseModel):
 
 
 # endregion
-
-
-RouteTypeLiteral: TypeAlias = Literal["CBV", "FBV", "ENDPOINT", "INNER_CBV"]
