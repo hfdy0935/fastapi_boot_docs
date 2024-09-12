@@ -3,7 +3,7 @@ import { tutorialNav, tutorialSidebar } from '../tutorial/v1';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: '/fastapi_boot_docs/', // 仓库名
+    base: '/fastapi_boot/', // 仓库名
     title: 'FastApiBoot',
     description: 'FastAPI项目启动器',
     head: [
