@@ -1,11 +1,11 @@
 <div align='center'><img src='./static/logo.png'></div>
-<div align='center' style="transform:scale(1.5)"><img src='./static/title.png'/></div>
+<div align='center' style="transform:scale(2)"><img src='./static/title.png'/></div>
 
 # :star:features
 
 -   Starter for FastAPI project, faster and easier.
 
-# ⚡Keywords:
+# ⚡Keywords
 
 -   Class based view(CBV) or fucntion based view(FBV).
 -   Scan project and autowire services,repositories,components and beans.
