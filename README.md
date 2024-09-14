@@ -1,7 +1,7 @@
 <div align='center'><img src='./static/logo.png'></div>
 <div align='center' style="transform:scale(2)"><img src='./static/title.png'/></div>
 
-# :star:features
+# :star:Features
 
 -   Starter for FastAPI project, faster and easier.
 
