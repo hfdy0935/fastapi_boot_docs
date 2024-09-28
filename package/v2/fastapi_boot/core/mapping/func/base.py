@@ -52,32 +52,6 @@ def Req(
         generate_unique_id
     ),
 ):
-    """
-    - 装饰类时除了path的其它参数会被忽略
-    - 装饰函数时等同于fastapi.APIRouter().route()的参数
-
-    ## Example
-    ```python
-    from typing import Annotated
-    from pydantic import BaseModel, Field
-    from fastapi_boot import Controller,RequestMapping,GetMapping
-
-    # User better in another module, this module can import it to use
-    class User(BaseModel):
-        id: Annotated[str, Field(description='id')]
-        username: Annotated[str, Field(max_length=30, description='username')]
-        password: Annotated[str, Field(
-            regex='^[a-zA-Z_@#$][a-zA-Z0-9@#$]{7,17}$', description='password')]
-        age: Annotated[int, Field(ge=0, le=200, description='age')]
-
-    @Controller
-    @RequestMapping(path = '/', tags = ['userController'])
-    class UserController:
-        @GetMapping(path = '/{id}', description = 'get user's id', status_code = 200, response_model = User)
-        def get_user_by_id(self, id: Path(...,description='id')):
-            ...
-    ```
-    """
     _path: str = trans_path(path)
 
     def decorator(obj: Callable):
